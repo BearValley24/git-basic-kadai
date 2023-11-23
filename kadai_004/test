@@ -1,1 +1,107 @@
-test
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git add hello_world.txt
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello_world.txt
+        renamed:    ../sample.txt -> ../move_test/sample.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../move_test/sample.txt
+
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello_world.txt
+        renamed:    ../sample.txt -> ../move_test/sample.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+        modified:   ../move_test/sample.txt
+
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello_world.txt
+        renamed:    ../sample.txt -> ../move_test/sample.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+        modified:   ../move_test/sample.txt
+
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git -commit -m "hello_world.txtを追加"
+unknown option: -commit
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git commit -m "hello_world.txtを追加" 
+[master 74b2e35] hello_world.txtを追加
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 git_challenge/hello_world.txt
+ rename sample.txt => move_test/sample.txt (100%)
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+        modified:   ../move_test/sample.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git commit -m "日本語訳を追加"       
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+        modified:   ../move_test/sample.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git log
+commit 74b2e353500d819282836459cbfca3d62a03e697 (HEAD -> master)
+Author: BearValley24 <shadow0204@hotmail.co.jp>
+Date:   Fri Nov 24 08:24:26 2023 +0900
+
+    hello_world.txtを追加
+
+commit a54dda506898c4cea19ccba5eb80c09baec5a11e (origin/master)
+Author: BearValley24 <shadow0204@hotmail.co.jp>
+Date:   Fri Nov 24 07:15:55 2023 +0900
+
+    最初のコミット
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git log --oneline
+74b2e35 (HEAD -> master) hello_world.txtを追加
+a54dda5 (origin/master) 最初のコミット
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git add .\hello_world.txt
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git log --oneline        
+74b2e35 (HEAD -> master) hello_world.txtを追加
+a54dda5 (origin/master) 最初のコミット
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git commit -m "日本語訳を追加"
+[master bcb2f95] 日本語訳を追加
+ 1 file changed, 2 insertions(+)
+PS C:\Users\RAI Kumagai\Desktop\Lesson\git_tutorial\git_challenge> git log --oneline
+bcb2f95 (HEAD -> master) 日本語訳を追加
+74b2e35 hello_world.txtを追加
+a54dda5 (origin/master) 最初のコミット
